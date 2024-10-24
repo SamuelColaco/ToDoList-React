@@ -1,0 +1,29 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg-primary: #222536;
+  --bg-secondary: #2D3046;
+
+  --bt-primary: #373A65;
+  --bt-primary-hover: #363f88;
+
+  --tx-color-primary: #8080AF;
+  --tx-color-secondary: #9D093B;
+
+}
+
+body{
+  background-color: var(--bg-primary);
+  text-align: center;
+
+  & h1{
+    
+    color: var(--tx-color-primary);
+  }
+}
+

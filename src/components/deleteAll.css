@@ -1,0 +1,34 @@
+
+
+.deleteAll{
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+
+    & button{
+        border: 1px solid var(--tx-color-secondary);
+        background-color: transparent;
+        border-radius: 8px;
+
+        color: var(--tx-color-secondary);
+
+        padding: 1rem;
+        cursor: pointer;
+
+
+        transition: 0.2 ease-in-out;
+
+        &:hover{
+            background-color: var(--tx-color-secondary);
+
+            color: white;
+        }
+    }
+}
+
+@media (width <= 768px){
+    .deleteAll{
+        width: 95%;
+    }
+}

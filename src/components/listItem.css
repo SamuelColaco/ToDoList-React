@@ -1,0 +1,54 @@
+
+
+
+
+.Item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        gap: 1rem;
+    
+        border: 1px solid var(--bg-secondary);
+        padding: 1rem;
+    
+        width: 50%;
+    
+        position: relative;
+    
+        & p{
+            color: white;
+        }
+
+        & .delete{
+            position: absolute;
+    
+           top: 1;
+           right: 0;
+    
+           color: var(--bg-secondary);
+           border: 0;
+           border-radius: 8px 0px 0px 8px;
+    
+    
+    
+            background-color: transparent;
+            padding: 1rem 1.2rem;
+            cursor: pointer;
+
+            transition: 0.2s ease-in-out;
+    
+            &:hover{
+                border: 1px solid var(--tx-color-secondary);
+                color: white;
+            }
+        }
+    }
+    
+
+@media (width <=768px){
+    .Item{
+            width: 90%;
+    }
+}
+

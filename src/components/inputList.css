@@ -1,0 +1,50 @@
+
+
+.divForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+
+    & .inputList{
+        width: 600px;
+        padding: 1rem;
+    
+        & input{
+            background-color: var(--bg-secondary);
+            border: 0;
+            border-radius: 8px 0px 0px 8px;
+            padding: 1rem 2rem;
+            width: 70%;
+    
+            outline: 0;
+        }
+    
+        & button{
+            background-color: var(--bt-primary);
+            border: 0;
+            border-radius: 0px 8px 8px 0px;
+            padding: 1rem;
+    
+            color: white;
+    
+            cursor: pointer;
+    
+            transition:  0.2s ease-in-out;
+            &:hover{
+                background-color: var(--bt-primary-hover);
+            }
+        }
+    }
+}
+
+@media (width <= 768px){
+    .divForm{
+
+        & .inputList{
+            width: 100%;
+        }
+    }
+}
