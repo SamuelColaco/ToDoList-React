@@ -40,6 +40,8 @@
     
             background-color: transparent;
             padding: 1rem 1.2rem;
+            border: 1px solid transparent;
+            
             cursor: pointer;
 
             transition: 0.2s ease-in-out;
@@ -50,15 +52,6 @@
             }
         }
 
-        &.complete div{
-            position: absolute;
-            top: 1.3rem;
-            left: 0;
-            width: 70%;
-            height: 0.5rem;
-
-            background-color: var(--bg-secondary);
-        }
 
         &:hover{
             background-color: var(--bg-secondary);
@@ -70,6 +63,26 @@
 
         &.complete{
             background-color: rgba(128, 128, 128, 0.059);
+            border: 1px solid transparent;
+            & .delete{
+                cursor: not-allowed;
+                &:hover{
+                    border: 0;
+                    color: var(--bg-secondary);
+
+                }
+            }
+
+            & p{
+                color: var(--bg-secondary);
+                text-decoration: line-through;
+            }
+
+            &:hover{
+                & .delete{
+                    color: var(--bg-secondary);
+                }
+            }
         }
     }
     

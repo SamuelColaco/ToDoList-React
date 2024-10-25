@@ -33,9 +33,11 @@ function InputList(){
         setItems(newItem)
     }
 
-    function hasCompleted(){
-        setComplete(props => !props)
+    function hasCompleted(index){
+        const div = document.querySelectorAll(".Item")
+        div[index].classList.toggle('complete')    
     }
+
 
     return(
     <div className='divForm'>
@@ -50,7 +52,12 @@ function InputList(){
         </form> 
 
             {items.map((item, index) => {
-                return <ListItem key={index} text={item} deleteItem = {() => deleteByTarget(item)}/>
+                return <ListItem 
+                key={index} 
+                text={item} 
+                deleteItem = {() => deleteByTarget(item)} 
+                hasComplete={() => hasCompleted(index)} complete={complete === index}
+                />
             })}
 
             {items.length > 1 ? <DeleteAll onClick={deleteAll}  /> : ""}
