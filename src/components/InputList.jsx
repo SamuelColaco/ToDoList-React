@@ -12,6 +12,7 @@ function InputList(){
 
     const [ items, setItems] = useState([])
     const [ text, setText ] = useState("")
+    const [ complete, setComplete ] = useState(false)
 
 
     function click(event){
@@ -26,9 +27,14 @@ function InputList(){
     function deleteAll(){
         setItems([])
     }
+    
     function deleteByTarget(item){
         const newItem = items.filter( i => i !== item)
         setItems(newItem)
+    }
+
+    function hasCompleted(){
+        setComplete(props => !props)
     }
 
     return(
@@ -44,7 +50,7 @@ function InputList(){
         </form> 
 
             {items.map((item, index) => {
-                return <ListItem key={index} text={item} deleteItem = {() => deleteByTarget(item)} />
+                return <ListItem key={index} text={item} deleteItem = {() => deleteByTarget(item)}/>
             })}
 
             {items.length > 1 ? <DeleteAll onClick={deleteAll}  /> : ""}

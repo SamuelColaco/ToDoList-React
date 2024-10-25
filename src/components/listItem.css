@@ -11,10 +11,16 @@
     
         border: 1px solid var(--bg-secondary);
         padding: 1rem;
+
+            
     
         width: 50%;
     
         position: relative;
+
+        transition: 0.2s ease-in-out;
+
+        cursor: pointer;
     
         & p{
             color: white;
@@ -42,6 +48,28 @@
                 border: 1px solid var(--tx-color-secondary);
                 color: white;
             }
+        }
+
+        &.complete div{
+            position: absolute;
+            top: 1.3rem;
+            left: 0;
+            width: 70%;
+            height: 0.5rem;
+
+            background-color: var(--bg-secondary);
+        }
+
+        &:hover{
+            background-color: var(--bg-secondary);
+
+            & .delete{
+                color: white;
+            }
+        }
+
+        &.complete{
+            background-color: rgba(128, 128, 128, 0.059);
         }
     }
     
